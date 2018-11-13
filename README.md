@@ -53,8 +53,22 @@ Works like a charm.
 It has been deployed to jCenter.
 
 ```
-compile "com.bennyhuo.kotlin:releasable-nonnull-vars:1.0.1"
+compile "com.bennyhuo.kotlin:releasable-nonnull-vars:1.1.0"
 ```
+
+# Change Log
+
+## 1.1.0
+
+* Use a `WeakIdentityMap` instead of the original `WeakHashMap` to solve the problem of improper implementation of equality.
+
+## 1.0.1
+
+* Make the kotlin-stdlib `compileOnly` not to conflict with the kotlin version in the user project. 
+
+# Theory
+
+If you have the kotlin-reflect.jar in your classpath, reflection will be used. Otherwise, it will use an WeakMap to help find the delegate object.
 
 # Issue
 

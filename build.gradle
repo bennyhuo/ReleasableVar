@@ -11,12 +11,14 @@ buildscript {
 }
 
 group 'com.bennyhuo.kotlin'
-version '1.0.1'
+version '1.1.0'
 
 apply plugin: 'java'
 apply plugin: 'kotlin'
 
 sourceCompatibility = 1.8
+
+sourceSets.main.java.srcDirs += "src/main/kotlin"
 
 repositories {
     jcenter()

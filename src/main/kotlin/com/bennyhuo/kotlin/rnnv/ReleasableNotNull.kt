@@ -9,14 +9,15 @@ import kotlin.reflect.jvm.*
 
 fun <T : Any> releasableNotNull() = ReleasableNotNull<T>()
 
-private lateinit var releasableRefs: WeakHashMap<Any, MutableMap<String, ReleasableNotNull<*>>>
+internal lateinit var releasableRefs: WeakIdentityMap<Any, MutableMap<String, ReleasableNotNull<*>>>
 
 private val isReflectionEnabled by lazy {
             try {
                 Class.forName("kotlin.reflect.jvm.internal.KClassImpl")
+                println("Use Reflect.")
                 true
             } catch (e: Exception) {
-                releasableRefs = WeakHashMap()
+                releasableRefs = WeakIdentityMap()
                 false
             }
         }
