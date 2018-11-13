@@ -11,7 +11,7 @@ buildscript {
 }
 
 group 'com.bennyhuo.kotlin'
-version '1.0'
+version '1.0.1'
 
 apply plugin: 'java'
 apply plugin: 'kotlin'
@@ -23,8 +23,9 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     compileOnly "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 

@@ -53,7 +53,7 @@ Works like a charm.
 It has been deployed to jCenter.
 
 ```
-compile "com.bennyhuo.kotlin:releasable-nonnull-vars:1.0"
+compile "com.bennyhuo.kotlin:releasable-nonnull-vars:1.0.1"
 ```
 
 # Issue
