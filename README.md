@@ -17,7 +17,7 @@ class MainActivity: Activity {
     
     override fun onDestroy(){
         super.onDestroy()
-        image.release()
+        image.recycle()
         image = null // You cannot do that!!
     }
 }
@@ -38,7 +38,7 @@ class MainActivity: Activity {
     
     override fun onDestroy(){
         super.onDestroy()
-        image.release()
+        image.recycle()
         ::image.release() // You simply make the backing value null, thus making the gc of this Bitmap instance possible. 
     }
 }
