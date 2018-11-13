@@ -1,0 +1,7 @@
+build
+.gradle
+*.iml
+.idea
+out
+jcenter.properties
+local.properties
